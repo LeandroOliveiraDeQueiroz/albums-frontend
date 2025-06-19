@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { IAlbum, IUser } from '../../types';
 import axios from 'axios';
-import AlbumsTable from '../../components/albumsTable/AlbumsTable';
+import AlbumsTable from '../../components/album/albumsTable/AlbumsTable';
 import { useLocation, useNavigate } from 'react-router';
 import Loading from '../../components/loading/Loading';
 import { useAuthContext } from '../../context/auth/auth';
-import AddAlbumModal from '../../components/addAlbumModal/AddAlbumModal';
-import EditAlbumModal from '../../components/editAlbumModal/EditAlbumModal';
+import AddAlbumModal from '../../components/album/addAlbumModal/AddAlbumModal';
+import EditAlbumModal from '../../components/album/editAlbumModal/EditAlbumModal';
 
 const API = 'http://localhost:3000';
 

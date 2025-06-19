@@ -1,5 +1,5 @@
 import { FaEllipsisVertical } from 'react-icons/fa6';
-import type { IAlbum } from '../../types';
+import type { IAlbum } from '../../../types';
 
 const AlbumsTable = ({
   albums,
