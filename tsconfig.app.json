@@ -4,6 +4,12 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": [
+      "vitest/globals", // For Vitest global APIs like 'expect', 'test' (if globals: true in vitest.config.ts)
+      "@testing-library/jest-dom/vitest" // Crucial for 'toBeInTheDocument'
+      // "vite/client",                  // If you're using Vite for your frontend
+      // ... any other types specific to your app
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -23,5 +29,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "vitest.setup.ts"]
 }

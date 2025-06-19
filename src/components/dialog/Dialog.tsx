@@ -29,7 +29,11 @@ const Dialog = ({
           </DialogBaseUI.Title>
           {content}
           <div className="flex justify-end gap-4">
-            <InternalButton isCloseButton disabled={loading}>
+            <InternalButton
+              isCloseButton
+              disabled={loading}
+              data-testid="dialog-close-button"
+            >
               Close
             </InternalButton>
             {actionButtons}
