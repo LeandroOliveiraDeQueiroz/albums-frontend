@@ -31,7 +31,7 @@ describe('PhotoGrid Component', () => {
     return render(<PhotoGrid {...defaultProps} {...props} />);
   };
 
-  it('should photo the photos with correct alt and src', () => {
+  it('should render the photos with correct alt and src', () => {
     renderPhotoComponent();
 
     const firstPhoto = screen.getByAltText(mockPhotos[0].title);
@@ -44,7 +44,7 @@ describe('PhotoGrid Component', () => {
   });
 
   describe('Delete Buttons Visibility', () => {
-    it('shows the delete buttons when onDelete exist', () => {
+    it('should render the delete buttons when onDelete exist', () => {
       renderPhotoComponent({ onDelete: vi.fn() });
 
       const photoContainers = screen.getAllByTestId('delete-button-container');

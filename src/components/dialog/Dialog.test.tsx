@@ -26,7 +26,7 @@ describe('Dialog Component', () => {
     return render(<Dialog {...defaultProps} {...props} />);
   };
 
-  it('should show title, content, and action buttons when the dialog is open', () => {
+  it('should render title, content, and action buttons when the dialog is open', () => {
     const title = 'Dialog Test';
     const textContent = 'Text Content';
     const content = <div data-testid="dialog-content">{textContent}</div>;
@@ -44,7 +44,7 @@ describe('Dialog Component', () => {
     expect(screen.getByTestId('dialog-close-button')).toBeInTheDocument();
   });
 
-  it('should not show title, content, action buttons, or overlay when the dialog is closed', () => {
+  it('should render title, content, action buttons when the dialog is closed', () => {
     renderPhotoComponent({
       open: false,
     });
@@ -73,7 +73,7 @@ describe('Dialog Component', () => {
     expect(mockOnOpenChange).toHaveBeenCalledWith(false);
   });
 
-  it('should show the open button when the dialog is closed', () => {
+  it('should render the open button when the dialog is closed', () => {
     renderPhotoComponent({
       open: false,
     });

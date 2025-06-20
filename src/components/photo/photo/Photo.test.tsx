@@ -23,7 +23,7 @@ describe('Photo Component', () => {
     return render(<Photo {...defaultProps} {...props} />);
   };
 
-  it('renders the photo with correct src and alt text', () => {
+  it('should render the photo with correct src and alt text', () => {
     renderPhotoComponent();
 
     const image = screen.getByAltText(mockPhoto.title);
@@ -33,14 +33,14 @@ describe('Photo Component', () => {
   });
 
   describe('Delete Button Visibility', () => {
-    it('shows the delete button when canDelete is true', () => {
+    it('should render the delete button when canDelete is true', () => {
       renderPhotoComponent({ canDelete: true });
 
       const deleteIconContainer = screen.getByTestId('delete-button-container');
       expect(deleteIconContainer).toBeInTheDocument();
     });
 
-    it('hides the delete button when canDelete is false', () => {
+    it('should hides the delete button when canDelete is false', () => {
       renderPhotoComponent({ canDelete: false });
 
       expect(
@@ -50,7 +50,7 @@ describe('Photo Component', () => {
   });
 
   describe('Delete Functionality', () => {
-    it('calls onDelete when the delete button is clicked and not loading', async () => {
+    it('should calls onDelete when the delete button is clicked', async () => {
       const mockOnDelete = vi.fn();
       renderPhotoComponent({
         onDelete: mockOnDelete,

@@ -4,7 +4,6 @@ const PhotoForm = ({
   title,
   onTitleChange,
   isLoading,
-  // photoFile,
   onPhotoFileChange,
 }: PhotoFormProps) => {
   return (
@@ -17,7 +16,6 @@ const PhotoForm = ({
       </label>
       <input
         id="image-title"
-        // defaultValue={title}
         value={title}
         onChange={(e) => {
           onTitleChange(e.target.value);
@@ -37,7 +35,6 @@ const PhotoForm = ({
         type="file"
         accept="image/png, image/jpeg"
         id="image-file"
-        // value={photoFile?.name}
         onChange={onPhotoFileChange}
         disabled={isLoading}
         name="image"
