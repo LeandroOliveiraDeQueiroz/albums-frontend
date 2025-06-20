@@ -16,11 +16,15 @@ const Photo = ({
       className={`relative shadow-sm p-1 bg-white border border-gray-200 rounded-lg ${onDeleteLoading ? 'animate-pulse' : ''}`}
     >
       {canDelete && (
-        <div className="absolute right-1 top-1">
+        <div
+          className="absolute right-1 top-1"
+          data-testid="delete-button-container"
+        >
           <MdDelete
             onClick={handleOnDelete}
             size={20}
             color={onDeleteLoading ? 'gray' : 'black'}
+            data-testid="delete-button"
           />
         </div>
       )}

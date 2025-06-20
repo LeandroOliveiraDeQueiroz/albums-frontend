@@ -1,12 +1,12 @@
 import { useCallback, useState } from 'react';
-import Dialog from '../dialog/Dialog';
+import Dialog from '../../dialog/Dialog';
 import AlbumForm from '../albumForm/AlbumForm';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
-import { useAuthContext } from '../../context/auth/auth';
-import type { IAlbum } from '../../types';
-import OpenButton from '../dialog/OpenButton';
-import InternalButton from '../dialog/InternalButton';
+import { useAuthContext } from '../../../context/auth/auth';
+import type { IAlbum } from '../../../types';
+import OpenButton from '../../dialog/OpenButton';
+import InternalButton from '../../dialog/InternalButton';
 
 const API = 'http://localhost:3000';
 

@@ -2,11 +2,11 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { IAlbum, IPhoto } from '../../types';
 import axios from 'axios';
 import { useLocation } from 'react-router';
-import PhotoGrid from '../../components/photo_f/photoGrid/PhotoGrid';
+import PhotoGrid from '../../components/photo/photoGrid/PhotoGrid';
 import Loading from '../../components/loading/Loading';
 import { useAuthContext } from '../../context/auth/auth';
 import { useSnackbar } from 'notistack';
-import AddPhotoModal from '../../components/photo_f/addPhotoModal/AddPhotoModal';
+import AddPhotoModal from '../../components/photo/addPhotoModal/AddPhotoModal';
 
 const API = 'http://localhost:3000';
 

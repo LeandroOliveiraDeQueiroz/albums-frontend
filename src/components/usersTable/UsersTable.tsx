@@ -28,6 +28,7 @@ const UsersTable = ({
             return (
               <tr
                 key={user.id}
+                id="user-row"
                 className="bg-white border-b border-gray-200 text-black cursor-pointer"
                 onClick={() => {
                   onRowClick(user);

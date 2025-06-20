@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router';
-import Header from './components/header/Header'; // Assuming you have a Header component
+import Header from './components/header/Header';
 import { AuthProvider } from './context/auth/auth';
 import { SnackbarProvider } from 'notistack';
 

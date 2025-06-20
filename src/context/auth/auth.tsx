@@ -69,8 +69,6 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
     });
   }, []);
 
-  console.log('album', albums);
-
   const value = useMemo(
     () => ({
       login,
